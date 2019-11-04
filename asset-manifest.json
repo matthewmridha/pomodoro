@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/pomodoro/static/css/main.8d133535.chunk.css",
+    "main.js": "/pomodoro/static/js/main.2e65484f.chunk.js",
+    "main.js.map": "/pomodoro/static/js/main.2e65484f.chunk.js.map",
+    "runtime-main.js": "/pomodoro/static/js/runtime-main.4bd1b737.js",
+    "runtime-main.js.map": "/pomodoro/static/js/runtime-main.4bd1b737.js.map",
+    "static/css/2.b12626c2.chunk.css": "/pomodoro/static/css/2.b12626c2.chunk.css",
+    "static/js/2.81fd24d9.chunk.js": "/pomodoro/static/js/2.81fd24d9.chunk.js",
+    "static/js/2.81fd24d9.chunk.js.map": "/pomodoro/static/js/2.81fd24d9.chunk.js.map",
+    "index.html": "/pomodoro/index.html",
+    "precache-manifest.2ba5d672b9dcbea15ef15bed028ee95d.js": "/pomodoro/precache-manifest.2ba5d672b9dcbea15ef15bed028ee95d.js",
+    "service-worker.js": "/pomodoro/service-worker.js",
+    "static/css/2.b12626c2.chunk.css.map": "/pomodoro/static/css/2.b12626c2.chunk.css.map",
+    "static/css/main.8d133535.chunk.css.map": "/pomodoro/static/css/main.8d133535.chunk.css.map",
+    "static/media/font-awesome.min.css": "/pomodoro/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4bd1b737.js",
+    "static/css/2.b12626c2.chunk.css",
+    "static/js/2.81fd24d9.chunk.js",
+    "static/css/main.8d133535.chunk.css",
+    "static/js/main.2e65484f.chunk.js"
+  ]
+}
