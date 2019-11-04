@@ -1,22 +1,242 @@
-.App {
-  text-align: center;
+/* hexagons from http://brenna.github.io/csshexagon/ */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
+.pomodoro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EBA487;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
+.setupWrapper {
+    display: flex;
+    width: auto;
+    flex-direction: column-reverse;
+    margin-left: -50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* ///// TIME SETTINGS ///// */
+
+.adjust {
+    width: 200px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 42px;
+    margin-right: 5px;
+    margin-top: -100px;
+    justify-self: flex-end;
 }
 
-.App-link {
-  color: #09d3ac;
+#break-length,
+#session-length {
+    position: relative;
+    margin-top: 120px;
+    margin-left: -31px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#session-length {
+    margin-left: -93px;
+}
+
+#session-increment {
+    margin-top: 10px;
+}
+
+#break-increment {
+    margin-left: -50px;
+    margin-top: 10px;
+}
+
+#break-decrement,
+#session-decrement {
+    position: relative;
+    margin-top: 230px;
+    margin-left: -93px;
+}
+
+#session-decrement {
+    margin-left: -32px;
+    margin-bottom: 17px;
+}
+
+#break-label {
+    margin-left: -50px;
+    margin-right: 30px;
+}
+
+#session-label {
+    margin-left: -25px;
+}
+
+.break {
+    margin-top: -100px;
+    margin-left: 45px;
+}
+
+
+/* /////HEXAGON///// */
+
+.hexagon {
+    position: relative;
+    width: 60px;
+    height: 34.64px;
+    background-color: #64C7CC;
+    margin: 17.32px 0;
+    border-left: solid 1.5px black;
+    border-right: solid 1.5px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 42px;
+    height: 42px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 7.5px;
+}
+
+.hexagon:before {
+    top: -21.2132px;
+    border-top: solid 1.5px black;
+    border-right: solid 1.5px black;
+}
+
+.hexagon:after {
+    bottom: -21.2132px;
+    border-bottom: solid 1.5px black;
+    border-left: solid 1.5px black;
+}
+
+.hexagon:hover {
+    opacity: 0.5;
+}
+
+.fa {
+    color: white;
+    font-size: 22px;
+    text-shadow: 1px 1px 5px black;
+    margin: 2px;
+}
+
+#break-label,
+#session-label {
+    text-align: center;
+    margin-top: 120px;
+    padding: 10px;
+}
+
+.timer {
+    width: 250px;
+    margin-left: -40px;
+    height: 250px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+#timer-label {
+    padding: 10px;
+    font-weight: bold;
+    justify-self: flex-end;
+}
+
+#time-left {
+    margin-top: 30px;
+    display: flex;
+    font-size: 48px;
+}
+
+.controls {
+    padding: 30px;
+    max-width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-button {
+    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    background: #64C7CC;
+    border: 1.5px solid black;
+    margin: 1px;
+}
+
+@media (max-width:500px) {
+    .setupWrapper {
+        margin-left: -50px;
+    }
+    .adjust {
+        margin: 0px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -75px;
+    }
+    .pomodoro {
+        width: 100vw;
+        height: 100vh;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    .session {
+        margin-top: -100px;
+    }
+    .break {
+        margin-top: 100px;
+        margin-left: -20px;
+    }
+    .timer {
+        margin-left: -130px;
+        margin-right: -130px;
+        height: 63vw;
+        width: 63vw;
+        z-index: 1;
+    }
+    .controls {
+        padding: 5px;
+        margin-bottom: -380px;
+        display: flex;
+        flex-direction: row;
+    }
+    .control-button {
+        height: 50px;
+        width: 100px;
+    }
+    .fa-play,
+    .fa-pause {
+        font-size: 18px;
+    }
 }
